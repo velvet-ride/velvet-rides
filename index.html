@@ -13,9 +13,10 @@
         }
         header {
         position: relative;
-        background: url('header img.png') no-repeat center center/cover;
-        height: 450px; /* Adjust height to match your design */
-        color: white;
+        background: url('header img.png') no-repeat center center;
+        background-size: contain; /* Ensures the full image is visible */
+        background-color: black; /* Adds a fallback color if space is left */
+        height: 400px; /* Adjust height based on your preference */
         }
         .header-content {
             position: absolute;
