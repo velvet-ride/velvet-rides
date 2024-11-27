@@ -3,45 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VELVET RIDES CAR RENTAL DUBAI</title>
+    <title>Fifth Gear Car Rental</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
+        /* Header Styles */
         header {
             position: relative;
-            width: 100%;
-            height: 100vh;
-            background: url('header img.png') no-repeat center center/cover;
-        }
-
-        .header-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+            background: url('header img.png') no-repeat center center;
+            background-size: cover; /* Ensures full coverage */
+            height: 400px; /* Adjust as needed */
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
-
-        .header-content h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-
-        .logo {
+        .language {
             position: absolute;
-            bottom: 20px;
-            left: 20px;
-            width: 80px;
+            top: 10px;
+            left: 10px;
+        }
+        .language select {
+            padding: 5px;
+            font-size: 14px;
+        }
+        .logo-container {
+            position: absolute;
+            top: 50px; /* Below language bar */
+            left: 10px; /* Adjust alignment */
+            text-align: left;
+        }
+        .logo {
+            width: 100px; /* Resize logo as needed */
             height: auto;
         }
-
         .whatsapp-link {
             position: absolute;
             top: 10px;
@@ -53,182 +43,112 @@
             border-radius: 5px;
             font-size: 14px;
         }
-
-        .language {
+        .header-content {
             position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-
-        .language select {
-            padding: 5px;
-        }
-
-        section {
-            padding: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
         }
-
-        .quote {
-            font-size: 1.5em;
-            font-style: italic;
-            margin-bottom: 20px;
+        .header-content h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000;
         }
-
-        .search-bar input[type="text"] {
+        /* Body Content */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .quote {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .search-bar {
+            text-align: center;
+            margin: 20px;
+        }
+        .search-bar input {
             width: 80%;
             padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            font-size: 16px;
         }
-
-        .categories, .brands, .cars {
+        .categories, .brands, .car-list {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 20px;
+            margin: 20px;
         }
-
-        .categories div, .brands div, .cars div {
+        .categories div, .brands div, .car-list div {
             width: 150px;
             text-align: center;
         }
-
-        .categories img, .brands img, .cars img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            padding: 20px;
+        .footer {
             text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #f4f4f4;
         }
-
-        .reviews {
-            margin-top: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .categories, .brands, .cars {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .header-content h1 {
-                font-size: 2em;
-            }
+        .footer a {
+            color: green;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="language">
+            <select>
+                <option value="en">English</option>
+                <option value="ar">Arabic</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+        <div class="logo-container">
+            <img src="logo.png" alt="Company Logo" class="logo">
+        </div>
+        <a href="https://wa.me/yourwhatsapplink" class="whatsapp-link">WhatsApp Us</a>
+        <div class="header-content">
+            <h1>Fifth Gear Car Rental</h1>
+        </div>
+    </header>
 
-<header>
-    <div class="language">
-        <select>
-            <option value="en">English</option>
-            <option value="ar">Arabic</option>
-            <option value="ru">Russian</option>
-            <option value="fr">French</option>
-            <option value="es">Spanish</option>
-            <option value="hi">Hindi</option>
-        </select>
+    <div class="quote">
+        <p>"Drive Luxury, Experience Comfort."</p>
     </div>
-    <a href="https://wa.me/+971522922728" class="whatsapp-link">WhatsApp Us</a>
-    <img src="logo.png" alt="Company Logo" class="logo">
-    <div class="header-content">
-        <h1>VELVET RIDES CAR RENTAL DUBAI</h1>
-    </div>
-</header>
 
-<section>
-    <p class="quote">"The journey is more important than the destination."</p>
     <div class="search-bar">
-        <input type="text" placeholder="Search car brand or model...">
+        <input type="text" placeholder="Search for car brands or models...">
     </div>
-    <h2>Car Categories</h2>
+
     <div class="categories">
-        <div>
-            <img src="category1.jpg" alt="Category 1">
-            <p>Luxury</p>
-        </div>
-        <div>
-            <img src="category2.jpg" alt="Category 2">
-            <p>Economy</p>
-        </div>
-        <div>
-            <img src="category3.jpg" alt="Category 3">
-            <p>Sports</p>
-        </div>
-        <div>
-            <img src="category4.jpg" alt="Category 4">
-            <p>SUV</p>
-        </div>
-        <div>
-            <img src="category5.jpg" alt="Category 5">
-            <p>Electric</p>
-        </div>
+        <div><img src="category1.jpg" alt="Category 1"><p>Luxury SUVs</p></div>
+        <div><img src="category2.jpg" alt="Category 2"><p>Sports Cars</p></div>
+        <div><img src="category3.jpg" alt="Category 3"><p>Convertible</p></div>
+        <div><img src="category4.jpg" alt="Category 4"><p>Sedans</p></div>
+        <div><img src="category5.jpg" alt="Category 5"><p>Economy</p></div>
     </div>
-    <h2>Car Brands</h2>
+
     <div class="brands">
-        <div>
-            <img src="brand1.jpg" alt="Brand 1">
-            <p>Toyota</p>
-        </div>
-        <div>
-            <img src="brand2.jpg" alt="Brand 2">
-            <p>BMW</p>
-        </div>
-        <div>
-            <img src="brand3.jpg" alt="Brand 3">
-            <p>Mercedes</p>
-        </div>
-        <div>
-            <img src="brand4.jpg" alt="Brand 4">
-            <p>Audi</p>
-        </div>
-        <div>
-            <img src="brand5.jpg" alt="Brand 5">
-            <p>Ford</p>
-        </div>
+        <div><img src="brand1.jpg" alt="Brand 1"><p>Mercedes</p></div>
+        <div><img src="brand2.jpg" alt="Brand 2"><p>BMW</p></div>
+        <div><img src="brand3.jpg" alt="Brand 3"><p>Range Rover</p></div>
+        <div><img src="brand4.jpg" alt="Brand 4"><p>Audi</p></div>
+        <div><img src="brand5.jpg" alt="Brand 5"><p>Toyota</p></div>
     </div>
-    <h2>Available Cars</h2>
-    <div class="cars">
-        <div>
-            <img src="car1.jpg" alt="Car 1">
-            <p>Toyota Corolla</p>
-        </div>
-        <div>
-            <img src="car2.jpg" alt="Car 2">
-            <p>BMW X5</p>
-        </div>
-        <div>
-            <img src="car3.jpg" alt="Car 3">
-            <p>Mercedes S-Class</p>
-        </div>
-        <div>
-            <img src="car4.jpg" alt="Car 4">
-            <p>Audi A4</p>
-        </div>
-        <div>
-            <img src="car5.jpg" alt="Car 5">
-            <p>Ford Mustang</p>
-        </div>
-    </div>
-</section>
 
-<footer>
-    <p>VELVET RIDES CAR RENTAL DUBAI</p>
-    <p>Address: Jumeirah Marina</p>
-    <a href="https://wa.me/+971522922728" class="whatsapp-link">WhatsApp Us</a>
-    <div class="reviews">
-        <h3>Customer Reviews</h3>
-        <textarea rows="5" cols="50" placeholder="Write your review..."></textarea><br>
-        <button>Submit Review</button>
+    <div class="car-list">
+        <div><img src="car1.jpg" alt="Car 1"><p>Car Name 1</p></div>
+        <div><img src="car2.jpg" alt="Car 2"><p>Car Name 2</p></div>
+        <div><img src="car3.jpg" alt="Car 3"><p>Car Name 3</p></div>
+        <div><img src="car4.jpg" alt="Car 4"><p>Car Name 4</p></div>
+        <div><img src="car5.jpg" alt="Car 5"><p>Car Name 5</p></div>
     </div>
-</footer>
 
+    <div class="footer">
+        <p>Fifth Gear Car Rental | Dubai, UAE</p>
+        <p>Contact us on <a href="https://wa.me/yourwhatsapplink">WhatsApp</a></p>
+    </div>
 </body>
 </html>
