@@ -11,20 +11,29 @@
             padding: 0;
             line-height: 1.6;
         }
-     <header>
-    <img src="https://github.com/velvet-ride/velvet-rides/blob/main/header%20img.png?raw=true" alt="Header Image" style="width: 100%; height: auto;">
-    </header>
+
+        header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('https://github.com/velvet-ride/velvet-rides/blob/main/header%20img.png?raw=true') no-repeat center center/cover;
+        }
+
         .header-content {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
+
         .header-content h1 {
             font-size: 3em;
-            text-shadow: 2px 2px 4px #000;
+            margin: 0;
         }
+
         .logo {
             position: absolute;
             bottom: 20px;
@@ -32,6 +41,7 @@
             width: 80px;
             height: auto;
         }
+
         .whatsapp-link {
             position: absolute;
             top: 10px;
@@ -43,23 +53,28 @@
             border-radius: 5px;
             font-size: 14px;
         }
+
         .language {
             position: absolute;
             top: 10px;
             left: 10px;
         }
+
         .language select {
             padding: 5px;
         }
+
         section {
             padding: 20px;
             text-align: center;
         }
+
         .quote {
             font-size: 1.5em;
             font-style: italic;
             margin-bottom: 20px;
         }
+
         .search-bar input[type="text"] {
             width: 80%;
             padding: 10px;
@@ -67,33 +82,43 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         .categories, .brands, .cars {
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-bottom: 20px;
         }
+
         .categories div, .brands div, .cars div {
             width: 150px;
             text-align: center;
         }
+
         .categories img, .brands img, .cars img {
             width: 100%;
             border-radius: 8px;
         }
+
         footer {
             background: #333;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
         .reviews {
             margin-top: 20px;
         }
+
         @media (max-width: 768px) {
             .categories, .brands, .cars {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .header-content h1 {
+                font-size: 2em;
             }
         }
     </style>
@@ -105,10 +130,10 @@
         <select>
             <option value="en">English</option>
             <option value="ar">Arabic</option>
-            <option value="fr">Russian</option>
+            <option value="ru">Russian</option>
             <option value="fr">French</option>
-            <option value="fr">Spanish</option>
-            <option value="fr">Hindi</option>
+            <option value="es">Spanish</option>
+            <option value="hi">Hindi</option>
         </select>
     </div>
     <a href="https://wa.me/+971522922728" class="whatsapp-link">WhatsApp Us</a>
